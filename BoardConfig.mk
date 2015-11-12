@@ -48,11 +48,11 @@ BOARD_KERNEL_SEPARATED_DT := true
 TARGET_KERNEL_ARCH := arm
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=480M
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8974
-TARGET_KERNEL_CONFIG := cyanogenmod_k9_defconfig
+TARGET_KERNEL_CONFIG := mokee_k9_defconfig
 
 # Enable DIAG on debug builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
-TARGET_KERNEL_ADDITIONAL_CONFIG:= cyanogenmod_debug_config
+TARGET_KERNEL_ADDITIONAL_CONFIG:= mokee_debug_config
 endif
 
 
@@ -79,8 +79,8 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/zuk/ham/cmhw
+# MK Hardware
+BOARD_HARDWARE_CLASS += device/zuk/ham/mkhw
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 20971520
