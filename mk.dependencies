@@ -1,14 +1,14 @@
 [
   {
+    "repository": "android_vendor_zuk_ham",
+    "target_path": "vendor/zuk/ham"
+  },
+  {
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
   },
   {
     "repository": "android_kernel_cyanogen_msm8974",
     "target_path": "kernel/cyanogen/msm8974"
-  },
-  {
-    "repository": "android_vendor_qcom_opensource_dataservices",
-    "target_path": "vendor/qcom/opensource/dataservices"
   }
 ]
