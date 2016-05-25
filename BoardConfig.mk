@@ -81,7 +81,11 @@ USE_DEVICE_SPECIFIC_GPS := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # MK Hardware
-BOARD_HARDWARE_CLASS += device/zuk/ham/mkhw
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS := \
+    hardware/mokee/mkhw \
+    device/zuk/ham/mkhw
+
 TARGET_TAP_TO_WAKE_NODE := /sys/devices/virtual/touch/tp_dev/gesture_on
 
 # Filesystem
