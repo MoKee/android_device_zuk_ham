@@ -81,7 +81,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8974
+    camera.msm8974 \
+    Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -95,6 +96,10 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -180,8 +185,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Data
 PRODUCT_PACKAGES += \
-    librmnetctl \
-    rmnetcli
+    librmnetctl
 
 # WiFi
 PRODUCT_COPY_FILES += \
@@ -226,7 +230,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
 
 # Enable Bluetooth HFP
-PRODUCT_PROPERTY_OVERRIDES +=
+PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
