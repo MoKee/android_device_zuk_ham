@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc
 
+# Emergenry number list
+PRODUCT_PACKAGES += \
+    qcril_cm.db
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -78,6 +82,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
      media.aac_51_output_enabled=true \
      audio.offload.pcm.16bit.enable=true \
      audio.offload.pcm.24bit.enable=true
+
+# First api level, device has been commercially launched
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=22
 
 # Camera
 PRODUCT_PACKAGES += \
