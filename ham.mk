@@ -69,10 +69,12 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PROPERTY_OVERRIDES += \
+     use.dedicated.device.for.voip=true \
      ro.config.vc_call_vol_steps=6 \
      audio_hal.period_size=192 \
      mm.enable.smoothstreaming=true \
-     ro.qc.sdk.audio.fluencetype=none \
+     ro.qc.sdk.audio.fluencetype=fluence \
+     persist.audio.fluence.voicecall=true \
      audio.offload.buffer.size.kb=32 \
      av.offload.enable=true \
      av.streaming.offload.enable=true \
