@@ -17,7 +17,7 @@
 
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-mokee 
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -343,7 +343,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-06-01
+    ro.mk.build.vendor_security_patch=2016-06-01
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)

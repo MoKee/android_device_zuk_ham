@@ -57,11 +57,11 @@ TARGET_KERNEL_ARCH := arm
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=480M
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8974
-TARGET_KERNEL_CONFIG := lineageos_k9_defconfig
+TARGET_KERNEL_CONFIG := mokee_k9_defconfig
 
 # Enable DIAG on eng builds
 ifeq ($(TARGET_BUILD_VARIANT),eng)
-TARGET_KERNEL_ADDITIONAL_CONFIG:= lineageos_debug_config
+TARGET_KERNEL_ADDITIONAL_CONFIG:= mokee_debug_config
 endif
 
 # QCOM
@@ -91,10 +91,10 @@ TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# Lineage Hardware
+# MK Hardware
 BOARD_HARDWARE_CLASS := \
-    hardware/lineage/lineagehw \
-    $(DEVICE_PATH)/lineagehw
+    hardware/mokee/mkhw \
+    $(DEVICE_PATH)/mkhw
 
 # Tap to wake
 TARGET_TAP_TO_WAKE_NODE := /sys/devices/virtual/touch/tp_dev/gesture_on
