@@ -34,8 +34,8 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "interactive"
-    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1400000:40000 1700000:20000"
-    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 90
+    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "19000 1400000:39000 1700000:19000"
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 99
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1190400
     write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 1
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90 1800000:70"
@@ -62,7 +62,7 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
-    write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
 
     write /dev/cpuctl/cpu.notify_on_migrate 1
 
@@ -98,5 +98,5 @@ on property:init.svc.recovery=running
 
 on property:dev.bootcomplete=1
     rm /data/system/perfd/default_values
-    setprop sys.io.scheduler bfq
+    setprop sys.io.scheduler "bfq"
     start mpdecision
