@@ -17,7 +17,7 @@
 
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-mokee 
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -148,7 +148,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
+    vendor.mokee.livedisplay@2.0-service-sysfs
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -227,7 +227,7 @@ PRODUCT_COPY_FILES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.ham
+    vendor.mokee.touch@1.0-service.ham
 
 # USB
 PRODUCT_PACKAGES += \
@@ -236,7 +236,7 @@ PRODUCT_PACKAGES += \
 
 # Trust HAL
 PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+    vendor.mokee.trust@1.0-service
 
 # Data
 PRODUCT_PACKAGES += \
@@ -364,7 +364,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2016-06-01
+    ro.mk.build.vendor_security_patch=2016-06-01
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)

@@ -21,7 +21,7 @@
 #include "KeyDisabler.h"
 
 namespace vendor {
-namespace lineage {
+namespace mokee {
 namespace touch {
 namespace V1_0 {
 namespace implementation {
@@ -31,7 +31,7 @@ const static std::string kControlPath = "/sys/devices/virtual/touch/tp_dev/key_e
 KeyDisabler::KeyDisabler() {
 }
 
-// Methods from ::vendor::lineage::touch::V1_0::IKeyDisabler follow.
+// Methods from ::vendor::mokee::touch::V1_0::IKeyDisabler follow.
 Return<bool> KeyDisabler::isEnabled() {
     int value;
 
@@ -59,5 +59,5 @@ Return<bool> KeyDisabler::setEnabled(bool enabled) {
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace touch
-}  // namespace lineage
+}  // namespace mokee
 }  // namespace vendor

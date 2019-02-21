@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.mokee.settings.device;
 
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
@@ -28,7 +28,7 @@ import android.view.MenuItem;
 
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 
-import org.lineageos.internal.util.FileUtils;
+import org.mokee.internal.util.FileUtils;
 
 public class ButtonSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener {

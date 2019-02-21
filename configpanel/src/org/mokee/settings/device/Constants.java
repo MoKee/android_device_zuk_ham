@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.mokee.settings.device;
 
 import java.util.HashMap;
 import java.util.Map;
