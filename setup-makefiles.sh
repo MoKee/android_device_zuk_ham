@@ -44,7 +44,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$MK_ROOT"
 write_headers
 
 # Rules to copy blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
+write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # Blobs for TWRP data decryption
 cat << EOF >> "$BOARDMK"
